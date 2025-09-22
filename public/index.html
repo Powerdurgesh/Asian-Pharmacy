@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pharmacy Billing</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pharmacy Billing</h1>
+    <form id="billForm">
+      <div class="section">
+        <h3>Pharmacy Details</h3>
+        <input type="text" id="pharmacyName" placeholder="Pharmacy Name" value="ASIAN PHARMACY">
+        <input type="text" id="pharmacyAddress" placeholder="Pharmacy Address" Value="NARASARAOPETA">
+</div>
+      <div class="section">
+        <h3>Patient Details</h3>
+        <input required type="text" id="patientName" placeholder="Patient Name">
+        <input required type="text" id="patientNumber" placeholder="Mobile Number">
+        <input required type="number" id="patientAge" placeholder="Age">
+        <input type="text" id="patientAddress" placeholder="Address">
+      </div>
+
+      <div class="section">
+        <h3>Medicines</h3>
+        <table id="itemsTable">
+          <thead><tr><th>Medicine</th><th>Qty</th><th>Rate</th><th>Amount</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <button type="button" id="addItem">Add Item</button>
+      </div>
+
+      <div class="section totals">
+        <div>Sub Total: <span id="subTotal">0.00</span></div>
+        <div>GST (0%): <span id="gst">0.00</span></div>
+        <div>Total: <span id="total">0.00</span></div>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Save & Send to Admin</button>
+        <button type="button" id="printBtn">Print</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
